@@ -316,8 +316,6 @@ async function updateCompany(req, res, next) {
     const id = req.params.id;
     const newData = req.body;
 
-    console.log(id, newData);
-
     // Update the document in the collection
     const updatedDoc = await Company.findByIdAndUpdate(id, newData, {
       new: true,
